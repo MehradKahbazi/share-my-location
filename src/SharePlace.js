@@ -12,7 +12,7 @@ class PlaceFinder {
 
     selectPlace(coordinates) {
         if(this.map) {
-            this.map.render();
+            this.map.reRender(coordinates);
         } else {
             this.map = new Map(coordinates);
         }
