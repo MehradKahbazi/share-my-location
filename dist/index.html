@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="assets/styles/share-place.css" />
     <link rel="stylesheet" href="assets/styles/leaflet.css">
     <link rel="shortcut icon" href="./assets/styles/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/styles/css/bootstrap.min.css">
+    <script src="./assets/js/bootstrap.bundle.min.js" defer></script>
     <script src="assets/scripts/SharePlace.js" defer></script>
   </head>
-  <body>
+  <body style="background: url('./assets/bg5.png'); background-color: #333;">
     <template id="modal-template">
-      <div class="backdrop"></div>
-      <div class="modal"></div>
+      <div class="my-backdrop"></div>
+      <div class="my-modal"></div>
     </template>
     <template id="loading-modal-content">
       <div class="modal__content centered">
@@ -26,29 +28,34 @@
       <h1>Share a Place!</h1>
     </header>
 
-    <section id="selected-place">
-      <div id="map">
+    <div id="selected-place" class="d-flex justify-content-center">
+      <div id="map" class="shadow-lg p-3 mb-5 mt-5 bg-body rounded">
        
       </div>
-    </section>
+    </div>
 
-    <section id="share-controls">
+    <div id="share-controls" class="form-group">
       <input
+        class="form-control mb-4"
         id="share-link"
         type="text"
         readonly
         value="Select a place to get a sharable link."
       />
       <button id="share-btn" disabled>Share Place</button>
-    </section>
+    </div>
 
-    <section id="place-data">
-      <form >
+    <div id="place-data">
+      <form class="form-inline">
         <label for="address">Address</label>
-        <input id="input-form" type="text" />
-        <button type="submit">Find Place</button>
+        
+        <div class="form-group">
+          <input id="input-form" type="text" class="form-control mb-4" />
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Find Place</button>
+
       </form>
-      <button id="locate-btn">Get Current Location</button>
-    </section>
+      <button id="locate-btn" class="btn btn-primary mb-2">Get Current Location</button>
+    </div>
   </body>
 </html>

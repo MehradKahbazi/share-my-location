@@ -8,8 +8,8 @@ export class Modal {
   show() {
     if ("content" in document.createElement("template")) {
       const modalElements = document.importNode(this.modalTemplateEl.content, true);
-      this.modalElement = modalElements.querySelector(".modal");
-      this.backdropElement = modalElements.querySelector(".backdrop");
+      this.modalElement = modalElements.querySelector(".my-modal");
+      this.backdropElement = modalElements.querySelector(".my-backdrop");
       const contentElement = document.importNode(
         this.contentTemplateEl.content,
         true

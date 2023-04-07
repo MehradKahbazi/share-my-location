@@ -57,7 +57,7 @@ button:disabled:active {
   cursor: not-allowed;
 }
 
-.backdrop {
+.my-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -67,19 +67,20 @@ button:disabled:active {
   z-index: 10;
 }
 
-.modal {
+.my-modal {
   position: fixed;
   top: 25vh;
   left: 10%;
   width: 80%;
+  height: 20%;
   background: white;
   z-index: 20;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
-.modal__content {
-  padding: 1rem;
+.my-modal__content {
+  padding: 3rem;
   min-height: 10rem;
 }
 
@@ -115,7 +116,7 @@ button:disabled:active {
 }
 
 @media (min-width: 768px) {
-  .modal {
+  .my-modal {
     left: calc(50% - 15rem);
     width: 30rem;
   }
