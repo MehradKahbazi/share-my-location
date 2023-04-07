@@ -9,7 +9,7 @@
     "build": "webpack",
     "build:prod": "webpack --config webpack.config.prod.js"
   },
-  "author": "Maximilian Schwarzmüller",
+  "author": "Mehrad Kahbazi",
   "license": "ISC",
   "browserslist": "> 0.5%",
   "devDependencies": {
@@ -24,6 +24,7 @@
     "webpack-dev-server": "^3.8.1"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.7",
     "leaflet": "^1.9.3"
   }
 }
